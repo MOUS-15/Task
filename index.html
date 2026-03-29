@@ -1,82 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading Books</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading Books</title>
 
-    <style>
-        body {
-            background: linear-gradient(45deg, #60efff, #00ff87);
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+<style>
+body {
+    background: linear-gradient(45deg, #60efff, #00ff87);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-        .title {
-            background-color: rgb(220, 213, 204);
-            height: 60px;
-            font-size: 25px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+/* العنوان */
+.title {
+    background-color: rgb(220, 213, 204);
+    height: 60px;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
 
-        .image img {
-            width: 100%;
-            height: 900px;
-            object-fit: cover;
-        }
+/* الصورة */
+.image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 
-        .links ul {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 20px;
-            margin: 0;
-            font-size: 22px;
-            font-weight: 600;
-        }
+/* اللينكات */
+.links ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    flex-wrap: wrap; /* مهم جدا */
+    gap: 10px;
+}
 
-        .links ul li {
-            list-style: none;
-        }
+.links ul li {
+    list-style: none;
+}
 
-        .links ul li a {
-            text-decoration: none;
-            color: black;
-            background-color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+.links ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: inline-block;
+}
 
-        .links ul li a:hover {
-            background-color: black;
-            color: white;
-        }
-    </style>
+.links ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* 🔥 الموبايل */
+@media (max-width: 768px) {
+
+    .title {
+        font-size: 18px;
+        height: auto;
+    }
+
+    .image img {
+        height: 200px;
+    }
+
+    .links ul {
+        flex-direction: column; /* ينزلوا تحت بعض */
+    }
+
+    .links ul li a {
+        width: 80%;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+/* 🔥 شاشات صغيرة جدا */
+@media (max-width: 480px) {
+
+    .title {
+        font-size: 16px;
+    }
+
+    .links ul li a {
+        width: 90%;
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="title">
-        Welcome to my website reading book
-    </div>
+<div class="title">
+    Welcome to my website reading book
+</div>
 
-    <div class="image">
-        <img src="image.jpg" alt="Book Image">
-    </div>
+<div class="image">
+    <img src="image.jpg" alt="Book Image">
+</div>
 
-    <div class="links">
-        <ul>
-            <li><a href="#">Lumina Book</a></li>
-            <li><a href="#">Cyber Shelf</a></li>
-            <li><a href="#">Apex Library</a></li>
-            <li><a href="#">Nova Read</a></li>
-        </ul>
-    </div>
+<div class="links">
+    <ul>
+        <li><a href="#">Lumina Book</a></li>
+        <li><a href="#">Cyber Shelf</a></li>
+        <li><a href="#">Apex Library</a></li>
+        <li><a href="#">Nova Read</a></li>
+    </ul>
+</div>
 
 </body>
 </html>
